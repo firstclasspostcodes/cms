@@ -1,0 +1,53 @@
+{
+  "root": true,
+  "project": {
+    "name": "web-cms",
+    "title": "Firstclasspostcodes"
+  },
+  "__experimental_spaces": [
+    {
+      "name": "production",
+      "title": "Storefront",
+      "default": true,
+      "api": {
+        "projectId": "gxw4v7cj",
+        "dataset": "production"
+      }
+    },
+    {
+      "name": "documentation",
+      "title": "Documentation",
+      "api": {
+        "projectId": "gxw4v7cj",
+        "dataset": "documentation"
+      }
+    }
+  ],
+  "api": {
+    "projectId": "gxw4v7cj",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "seo-tools",
+    "color-list",
+    "json-input"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema.js"
+    }
+  ]
+}
