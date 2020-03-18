@@ -1,10 +1,9 @@
-import Heading from './styles/heading';
-import Subheading from './styles/subheading';
-
-import Center from './decorators/center';
-import Bold from './decorators/bold';
-import Italic from './decorators/italic';
-import Underline from './decorators/underline';
+import Heading from './extensions/heading';
+import Subheading from './extensions/subheading';
+import Bold from './extensions/bold';
+import Center from './extensions/center';
+import Italic from './extensions/italic';
+import Underline from './extensions/underline';
 
 export default {
   title: 'Text',
@@ -32,7 +31,6 @@ export default {
           Italic,
           Underline,
           Center,
-          { title: 'Code', value: 'code' },
         ],
         annotations: [
           { type: 'icon' },

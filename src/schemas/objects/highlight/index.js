@@ -13,7 +13,7 @@ const HighlightRender = ({ children, name, hue }) => {
 };
 
 export default {
-  title: 'Color',
+  title: 'Highlight',
   name: 'highlight',
   type: 'object',
   fields: [

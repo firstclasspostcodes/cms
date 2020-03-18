@@ -1,11 +1,3 @@
-import Theme from '@firstclasspostcodes/sw14/commonjs/theme';
-
-import validation from '../../validation';
-
-import schema from './schema';
-
-const breakpoints = Object.entries(Theme.breakpoints);
-
 export default {
   fieldsets: [
     {
@@ -25,7 +17,6 @@ export default {
       description: 'Configure the spacing for the content pane',
       name: 'spacing',
       type: 'json',
-      validation: Rule => Rule.custom(validation(schema)),
     },
     {
       title: 'Visible from',
@@ -33,12 +24,6 @@ export default {
       description: 'Configure which breakpoint this content is visible from, leave blank if it should always be visible',
       name: 'visibility',
       type: 'string',
-      options: {
-        list: breakpoints.map(([key, value]) => ({
-          title: `${key.toUpperCase()} (${value}px)`,
-          value: key,
-        })),
-      },
     },
     {
       title: 'Background',

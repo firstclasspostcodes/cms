@@ -47,7 +47,7 @@
   "parts": [
     {
       "name": "part:@sanity/base/schema",
-      "path": "./schemas/schema.js"
+      "path": "./src/schemas/schema.js"
     }
   ]
 }
