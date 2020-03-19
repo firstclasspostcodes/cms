@@ -3,6 +3,5 @@ commonjs
 esm
 config
 dist
-static
 /*.log
 /.env*
