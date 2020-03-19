@@ -1,1 +1,1 @@
-export { default as Route } from './src';
+export { Component as Route } from './src';

@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Typography } from '@firstclasspostcodes/sw14';
 
-export const Component = (props) => {
+export const Component = props => {
   const { children, node } = props;
 
   const { style = 'normal' } = node;
@@ -31,7 +32,7 @@ export const Component = (props) => {
       break;
     default:
       if (/^h\d/.test(style)) {
-        Heading = Typography[style.toUpperCase()]
+        Heading = Typography[style.toUpperCase()];
       }
   }
 
@@ -40,4 +41,12 @@ export const Component = (props) => {
   }
 
   return <Heading alignment={alignment}>{children}</Heading>;
+};
+
+Component.propTypes = {
+  children: PropTypes.node.isRequired,
+  node: PropTypes.shape({
+    style: PropTypes.string.isRequired,
+    children: PropTypes.node,
+  }).isRequired,
 };

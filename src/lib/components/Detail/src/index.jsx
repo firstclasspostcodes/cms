@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Detail } from '@firstclasspostcodes/sw14';
 
 import usePresentation from '../../../hooks/usePresentation';
@@ -14,4 +15,9 @@ export const Component = ({ content, summary, ...props }) => {
       <Content as={Detail.Content} content={content} />
     </Detail>
   );
+};
+
+Component.propTypes = {
+  content: PropTypes.shape(Content.propTypes).isRequired,
+  summary: PropTypes.shape(Content.propTypes).isRequired,
 };

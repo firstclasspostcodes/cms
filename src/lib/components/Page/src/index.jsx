@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Theme } from '@firstclasspostcodes/sw14';
 
 import usePresentation from '../../../hooks/usePresentation';
@@ -6,14 +7,15 @@ import usePresentation from '../../../hooks/usePresentation';
 import Reference from '../../Reference';
 import Content from '../../Content';
 import Pane from '../../Pane';
-import Layout from '../../Layout';
 
-export const Component = ({ body, ...props }) => {
+export const Component = ({ render, body, ...props }) => {
   const presentationProps = usePresentation({ ...props, theme: Theme });
   const bodyComponents = body.filter(Boolean);
-  return (
-    <Layout contentProps={presentationProps}>
-      <Reference components={[Content, Pane]} body={bodyComponents} />
-    </Layout>
-  );
+  const children = <Reference components={[Content, Pane]} body={bodyComponents} />;
+  return render({ children, ...presentationProps });
+};
+
+Component.propTypes = {
+  body: PropTypes.arrayOf([PropTypes.object]).isRequired,
+  render: PropTypes.func.isRequired,
 };

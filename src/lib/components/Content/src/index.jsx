@@ -13,10 +13,12 @@ import defaultSerializers from './defaultSerializers';
 const Content = ({ content, InteractableElements = {}, presentationOptions = {}, ...props }) => {
   const presentationProps = usePresentation(props, presentationOptions);
 
+  // eslint-disable-next-line react/prop-types
   defaultSerializers.types.interactable = ({ node }) => (
     <Interactable Elements={InteractableElements} {...node} />
   );
 
+  // eslint-disable-next-line react/prop-types
   defaultSerializers.container = ({ children, ...containerProps }) => (
     <Pane containment="layout paint" {...props} {...presentationProps} {...containerProps}>
       {children}
@@ -24,11 +26,7 @@ const Content = ({ content, InteractableElements = {}, presentationOptions = {},
   );
 
   return (
-    <BlockContent 
-      blocks={content}
-      renderContainerOnSingleChild={true}
-      serializers={defaultSerializers} 
-    />
+    <BlockContent blocks={content} renderContainerOnSingleChild serializers={defaultSerializers} />
   );
 };
 
@@ -43,6 +41,6 @@ Content.defaultProps = {
   InteractableElements: {},
 };
 
-Content.isType = (type) => /^content(block)?$/i.test(type);
+Content.isType = type => /^content(block)?$/i.test(type);
 
 export default withTheme(Content);

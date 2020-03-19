@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Typography } from '@firstclasspostcodes/sw14';
 import BlockContent from '@sanity/block-content-to-react';
@@ -19,35 +20,29 @@ const spreadProps = (Component, props = {}) => ({ _key: key, children, mark }) =
     Object.assign(componentProps, mark);
   }
 
-  return (
-    <Component {...componentProps}>{children}</Component>
-  );
-}
+  return <Component {...componentProps}>{children}</Component>;
+};
 
 const passThrough = ({ children }) => <>{children}</>;
 
 const blocks = [BlockContent.defaultSerializers.types.block];
 
 const types = {
-  block: (props) => {
+  block: props => {
     const heading = <Heading {...props} />;
     if (!heading) {
       return BlockContent.defaultSerializers.types.block(props);
     }
     return heading;
   },
-  
-  picture: ({ node }) => (
-    <Illustration image={node} spacing={{ mb: 4 }} />
-  ),
+
+  picture: ({ node }) => <Illustration image={node} spacing={{ mb: 4 }} />,
 
   interactable: () => {
-    throw new Error('<Interactable/> should be defined by the <Content/> component.')
+    throw new Error('<Interactable/> should be defined by the <Content/> component.');
   },
-  
-  detail: ({ node }) => (
-    <Detail {...node} />
-  ),
+
+  detail: ({ node }) => <Detail {...node} />,
 };
 
 const marks = {

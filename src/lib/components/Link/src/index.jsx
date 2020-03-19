@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Typography } from '@firstclasspostcodes/sw14';
 
 import useLink from '../../../hooks/useLink';
@@ -11,4 +12,8 @@ export const Component = ({ children, ...props }) => {
       {children}
     </Typography.Text>
   );
-}
+};
+
+Component.propTypes = {
+  children: PropTypes.node.isRequired,
+};
