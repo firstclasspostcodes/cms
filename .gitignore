@@ -1,4 +1,6 @@
 node_modules
+commonjs
+esm
 config
 dist
 static

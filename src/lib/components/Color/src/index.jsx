@@ -1,0 +1,10 @@
+import React from 'react';
+import { Typography } from '@firstclasspostcodes/sw14';
+
+import useColor from '../../../hooks/useColor';
+
+export const Component = ({ children, ...props }) => {
+  const colorProp = useColor(props);
+
+  return <Typography.Text color={colorProp}>{children}</Typography.Text>;
+};

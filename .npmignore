@@ -1,0 +1,12 @@
+/*.json
+/*.lock
+/*.js
+/.*rc
+.eslint*
+.gitignore
+src
+config
+dist
+static
+.env
+README.md
