@@ -26,19 +26,14 @@ export default {
         { title: 'Quote', value: 'blockquote' },
       ],
       marks: {
-        decorators: [
-          Bold,
-          Italic,
-          Underline,
-          Center,
-        ],
+        decorators: [Bold, Italic, Underline, Center],
         annotations: [
           { type: 'icon' },
           { type: 'color' },
           { type: 'highlight' },
           { type: 'button' },
           { type: 'internalLink' },
-          { type: 'externalLink' }
+          { type: 'externalLink' },
         ],
       },
     },

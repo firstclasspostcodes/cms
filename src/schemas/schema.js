@@ -1,6 +1,7 @@
-import createSchema from 'part:@sanity/base/schema-creator'
+/* eslint-disable import/no-unresolved */
+import createSchema from 'part:@sanity/base/schema-creator';
 
-import schemaTypes from 'all:part:@sanity/base/schema-type'
+import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 import button from './objects/button';
 import picture from './objects/picture';
@@ -36,12 +37,12 @@ export default createSchema({
     button,
     portableText,
     contentBlock,
-    
+
     illustration,
     content,
     pane,
     page,
     data,
     route,
-  ])
-})
+  ]),
+});

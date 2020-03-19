@@ -14,10 +14,9 @@ const Picture = {
       title: 'Caption',
       options: {
         isHighlighted: true,
-      }
+      },
     },
-  ]
+  ],
 };
-
 
 export default Picture;

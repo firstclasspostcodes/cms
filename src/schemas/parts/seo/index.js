@@ -18,7 +18,7 @@ export default {
       description: 'Enter the URI for this content. Omit any domain name.',
       validation: Rule => [
         Rule.required(),
-        Rule.custom((slug) => /^\/.+/.test(slug) ? 'Slug cannot start with "/"' : true),
+        Rule.custom(slug => (/^\/.+/.test(slug) ? 'Slug cannot start with "/"' : true)),
       ],
     },
     {
@@ -28,7 +28,7 @@ export default {
       fieldset: 'seo',
       options: {
         baseUrl: () => process.env.SANITY_STUDIO_BASE_URL,
-        slug: (doc) => doc.slug.current.replace(/^\//, ''),
+        slug: doc => doc.slug.current.replace(/^\//, ''),
       },
     },
     {
@@ -42,16 +42,8 @@ export default {
         they crawl the page.
       `,
       options: {
-        list: [
-          'always',
-          'hourly',
-          'daily',
-          'weekly',
-          'monthly',
-          'yearly',
-          'never',
-        ]
-      }
+        list: ['always', 'hourly', 'daily', 'weekly', 'monthly', 'yearly', 'never'],
+      },
     },
     {
       name: 'priority',
@@ -64,8 +56,8 @@ export default {
         values range from 0.0 to 1.0. This value does not affect how your 
         pages are compared to pages on other sites—it only lets the search 
         engines know which pages you deem most important for the crawlers.
-      `
-    }
+      `,
+    },
   ],
 
   initialValue: {

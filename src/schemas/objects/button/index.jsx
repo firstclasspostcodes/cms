@@ -1,7 +1,12 @@
 import React from 'react';
-import { FiSquare } from 'react-icons/fi';
+import PropTypes from 'prop-types';
+import { FiSquare as Icon } from 'react-icons/fi';
 
-const ButtonRender = ({ children }) => <button>{children}</button>;
+const ButtonRender = ({ children }) => <button type="button">{children}</button>;
+
+ButtonRender.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default {
   title: 'Button',
@@ -56,7 +61,7 @@ export default {
     },
   ],
   blockEditor: {
-    icon: FiSquare,
+    icon: Icon,
     render: ButtonRender,
   },
 };

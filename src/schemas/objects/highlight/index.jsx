@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaHighlighter } from 'react-icons/fa';
+import PropTypes from 'prop-types';
+import { FaHighlighter as Icon } from 'react-icons/fa';
 import Theme from '@firstclasspostcodes/sw14/commonjs/theme';
 
 const colors = Object.keys(Theme.palette);
@@ -9,7 +10,18 @@ const HighlightRender = ({ children, name, hue }) => {
   if (name) {
     style.color = Theme.palette.color([name, hue]);
   }
-  return <span style={style}><FaHighlighter/> {children}</span>;
+  return (
+    <span style={style}>
+      <Icon />
+      {children}
+    </span>
+  );
+};
+
+HighlightRender.propTypes = {
+  name: PropTypes.string.isRequired,
+  hue: PropTypes.number.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default {
@@ -39,7 +51,7 @@ export default {
     },
   ],
   blockEditor: {
-    icon: FaHighlighter,
+    icon: Icon,
     render: HighlightRender,
   },
 };

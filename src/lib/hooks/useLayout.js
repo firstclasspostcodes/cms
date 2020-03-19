@@ -1,5 +1,4 @@
 import { useMemo } from 'react';
-import { Grid } from '@firstclasspostcodes/sw14';
 
 const withSortedSizeProp = (props, breakpoints) => {
   const { size } = props;
@@ -15,8 +14,6 @@ const withSortedSizeProp = (props, breakpoints) => {
 
 const getUnitLayout = ({ size = 1, ...rest }) => {
   const props = rest;
-
-  const sizeType = typeof size;
 
   switch (typeof size) {
     case 'number':
@@ -38,25 +35,24 @@ const getUnitLayout = ({ size = 1, ...rest }) => {
   return props;
 };
 
-export default ({ properties, theme }) => useMemo(() => {
-  const { grid: gridProps, unit = {} } = properties || {};
+export default ({ properties, theme }) =>
+  useMemo(() => {
+    const { grid: gridProps, unit = {} } = properties || {};
 
-  const breakpoints = Object.keys(theme.breakpoints);
+    const breakpoints = Object.keys(theme.breakpoints);
 
-  const isArray = unit.constructor === Array;
+    const layoutProps = {
+      gridProps,
+    };
 
-  const layoutProps = {
-    gridProps,
-  };
+    if (unit.constructor === Array) {
+      layoutProps.getUnitLayoutProps = index =>
+        getUnitLayout(withSortedSizeProp(unit[index], breakpoints));
+    } else {
+      const sortedSizeProp = withSortedSizeProp(unit, breakpoints);
+      const unitProps = getUnitLayout(sortedSizeProp);
+      layoutProps.getUnitLayoutProps = () => unitProps;
+    }
 
-  if (unit.constructor === Array) {
-    layoutProps.getUnitLayoutProps = index =>
-      getUnitLayout(withSortedSizeProp(unit[index], breakpoints));
-  } else {
-    const sortedSizeProp = withSortedSizeProp(unit, breakpoints);
-    const unitProps = getUnitLayout(sortedSizeProp);
-    layoutProps.getUnitLayoutProps = () => unitProps;
-  }
-
-  return layoutProps;
-}, [properties]);
+    return layoutProps;
+  }, [properties]);

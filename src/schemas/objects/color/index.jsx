@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaPalette } from 'react-icons/fa';
+import PropTypes from 'prop-types';
+import { FaPalette as Icon } from 'react-icons/fa';
 import Theme from '@firstclasspostcodes/sw14/commonjs/theme';
 
 const colors = Object.keys(Theme.palette);
@@ -10,6 +11,12 @@ const ColorRender = ({ children, name, hue }) => {
     style.color = Theme.palette.color([name, hue]);
   }
   return <span style={style}>{children}</span>;
+};
+
+ColorRender.propTypes = {
+  children: PropTypes.node.isRequired,
+  name: PropTypes.string.isRequired,
+  hue: PropTypes.number.isRequired,
 };
 
 export default {
@@ -39,7 +46,7 @@ export default {
     },
   ],
   blockEditor: {
-    icon: FaPalette,
+    icon: Icon,
     render: ColorRender,
   },
 };

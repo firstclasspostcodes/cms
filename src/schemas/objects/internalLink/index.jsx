@@ -1,7 +1,17 @@
 import React from 'react';
-import { FiLink } from 'react-icons/fi';
+import PropTypes from 'prop-types';
+import { FiLink as Icon } from 'react-icons/fi';
 
-const InternalLinkRender = ({ children }) => <span>{children} <FiLink/></span>;
+const InternalLinkRender = ({ children }) => (
+  <span>
+    {children}
+    <Icon />
+  </span>
+);
+
+InternalLinkRender.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default {
   title: 'Internal link to another document',
@@ -14,7 +24,7 @@ export default {
       name: 'page',
       type: 'reference',
       to: [
-        { 
+        {
           type: 'route',
         },
       ],
@@ -24,10 +34,10 @@ export default {
       name: 'blank',
       description: 'Read https://css-tricks.com/use-target_blank/',
       type: 'boolean',
-    }
+    },
   ],
   blockEditor: {
-    icon: FiLink,
+    icon: Icon,
     render: InternalLinkRender,
   },
 };

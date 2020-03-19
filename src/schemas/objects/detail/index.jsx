@@ -1,7 +1,7 @@
 import React from 'react';
-import { MdDetails } from 'react-icons/md';
+import { MdDetails as Icon } from 'react-icons/md';
 
-const DetailRender = (props) => {
+const DetailRender = props => {
   console.log(props);
   return <h6>DetailRender</h6>;
 };
@@ -44,7 +44,7 @@ export default {
   ],
 
   blockEditor: {
-    icon: MdDetails,
+    icon: Icon,
     render: DetailRender,
   },
 
@@ -56,9 +56,12 @@ export default {
     prepare({ summary, content }) {
       const textFromBlock = (blocks = []) => {
         let title = 'No content';
-        const block = blocks.find(block => block._type === 'block');
+        const block = blocks.find(({ _type: type }) => type === 'block');
         if (block) {
-          title = block.children.filter(child => child._type === 'span').map(span => span.text).join('');
+          title = block.children
+            .filter(({ _type: type }) => type === 'span')
+            .map(span => span.text)
+            .join('');
         }
         return title;
       };
@@ -70,6 +73,6 @@ export default {
         title,
         subtitle,
       };
-    }
-  }
+    },
+  },
 };

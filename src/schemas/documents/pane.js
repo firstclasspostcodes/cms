@@ -59,5 +59,4 @@ const Pane = {
   ],
 };
 
-
 export default merge.all([Title, Pane, Layout, Presentation]);

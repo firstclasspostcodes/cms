@@ -1,7 +1,17 @@
 import React from 'react';
-import { FiExternalLink } from 'react-icons/fi';
+import PropTypes from 'prop-types';
+import { FiExternalLink as Icon } from 'react-icons/fi';
 
-const ExternalLinkRender = ({ children }) => <span>{children} <FiExternalLink /></span>;
+const ExternalLinkRender = ({ children }) => (
+  <span>
+    {children}
+    <Icon />
+  </span>
+);
+
+ExternalLinkRender.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default {
   title: 'URL',
@@ -23,10 +33,10 @@ export default {
       name: 'blank',
       description: 'Read https://css-tricks.com/use-target_blank/',
       type: 'boolean',
-    }
+    },
   ],
   blockEditor: {
-    icon: FiExternalLink,
+    icon: Icon,
     render: ExternalLinkRender,
   },
 };

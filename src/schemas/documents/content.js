@@ -4,7 +4,7 @@ import { FiFileText as Icon } from 'react-icons/fi';
 import Title from '../parts/title';
 import Presentation from '../parts/presentation';
 
-const Page = {
+const Content = {
   title: 'Content',
 
   description: `
@@ -27,4 +27,4 @@ const Page = {
   ],
 };
 
-export default merge.all([Title, Page, Presentation]);
+export default merge.all([Title, Content, Presentation]);

@@ -21,7 +21,8 @@ export default {
     {
       title: 'Visible from',
       fieldset: 'presentation',
-      description: 'Configure which breakpoint this content is visible from, leave blank if it should always be visible',
+      description:
+        'Configure which breakpoint this content is visible from, leave blank if it should always be visible',
       name: 'visibility',
       type: 'string',
     },
@@ -44,4 +45,4 @@ export default {
       fieldset: 'presentation',
     },
   ],
-}
+};
