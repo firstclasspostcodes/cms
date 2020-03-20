@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 
-import Page from '../../Page';
+import { Page } from '../../Page';
 
 export const Component = ({ head, path, data: { route, site } }) => (
   <>

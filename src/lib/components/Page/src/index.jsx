@@ -4,9 +4,9 @@ import { Theme } from '@firstclasspostcodes/sw14';
 
 import usePresentation from '../../../hooks/usePresentation';
 
-import Reference from '../../Reference';
-import Content from '../../Content';
-import Pane from '../../Pane';
+import { Reference } from '../../Reference';
+import { Content } from '../../Content';
+import { Pane } from '../../Pane';
 
 export const Component = ({ render, body, ...props }) => {
   const presentationProps = usePresentation({ ...props, theme: Theme });
