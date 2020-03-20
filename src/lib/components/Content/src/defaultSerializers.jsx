@@ -5,6 +5,7 @@ import BlockContent from '@sanity/block-content-to-react';
 
 import { HardBreak } from '../../HardBreak';
 import { Heading } from '../../Heading';
+import { Interactable } from '../../Interactable';
 import { Illustration } from '../../Illustration';
 import { Button } from '../../Button';
 import { Detail } from '../../Detail';
@@ -38,9 +39,7 @@ const types = {
 
   picture: ({ node }) => <Illustration image={node} spacing={{ mb: 4 }} />,
 
-  interactable: () => {
-    throw new Error('<Interactable/> should be defined by the <Content/> component.');
-  },
+  interactable: ({ node }) => <Interactable {...node} />,
 
   detail: ({ node }) => <Detail {...node} />,
 };

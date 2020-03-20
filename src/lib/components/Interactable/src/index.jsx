@@ -4,29 +4,30 @@ import { Pane } from '@firstclasspostcodes/sw14';
 
 import usePresentation from '../../../hooks/usePresentation';
 
-export const Component = ({ Elements, name, _key: key, id, data, ...props }) => {
+export const Component = ({ name, _key: key, id, data, ...props }) => {
   const presentationProps = usePresentation(props);
 
   const componentKey = id || key;
 
-  const { [name]: Element } = Elements;
+  const { [name]: Interactable } = Component.interactableComponents;
 
-  if (!Element) {
+  if (!Interactable) {
     throw new Error(`Missing Interactive Component: "${name}"`);
   }
 
   return (
     <Pane key={componentKey} {...props} {...presentationProps}>
-      <Element {...data} />
+      <Interactable {...data} />
     </Pane>
   );
 };
+
+Component.interactableComponents = {};
 
 Component.isType = type => type === 'interactable';
 
 Component.propTypes = {
   _key: PropTypes.string.isRequired,
-  Elements: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   data: PropTypes.object,
