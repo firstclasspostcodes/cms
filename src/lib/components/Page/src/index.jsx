@@ -12,7 +12,15 @@ export const Component = ({ render, body, ...props }) => {
   const presentationProps = usePresentation({ ...props, theme: Theme });
   const bodyComponents = body.filter(Boolean);
   const children = <Reference components={[Content, Pane]} body={bodyComponents} />;
-  return render({ children, ...presentationProps });
+  return Component.staticConfig.render({ children, ...presentationProps });
+};
+
+Component.displayName = 'Page';
+
+Component.staticConfig = {
+  render: () => {
+    throw new Error(`Configure "page.render" for the <Page/> component.`);
+  },
 };
 
 Component.propTypes = {

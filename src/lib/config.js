@@ -1,9 +1,19 @@
 import { Interactable } from './components/Interactable';
+import { Page } from './components/Page';
 
-export const configure = (config = {}) => {
-  const { interactableComponents } = config;
+const configMap = [
+  ['interactable', Interactable],
+  ['page', Page],
+];
 
-  if (interactableComponents) {
-    Interactable.interactableComponents = interactableComponents;
-  }
-};
+export const configure = (config = {}) =>
+  configMap.forEach(([key, Component]) => {
+    if (config[key]) {
+      Object.assign(Component, {
+        staticConfig: {
+          ...Component.staticConfig,
+          ...config[key],
+        },
+      });
+    }
+  });

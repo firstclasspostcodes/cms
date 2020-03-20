@@ -9,7 +9,7 @@ export const Component = ({ name, _key: key, id, data, ...props }) => {
 
   const componentKey = id || key;
 
-  const { [name]: Interactable } = Component.interactableComponents;
+  const { [name]: Interactable } = Component.staticConfig.components;
 
   if (!Interactable) {
     throw new Error(`Missing Interactive Component: "${name}"`);
@@ -22,7 +22,9 @@ export const Component = ({ name, _key: key, id, data, ...props }) => {
   );
 };
 
-Component.interactableComponents = {};
+Component.staticConfig = {
+  components: {},
+};
 
 Component.isType = type => type === 'interactable';
 
