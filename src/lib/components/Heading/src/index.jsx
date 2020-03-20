@@ -49,6 +49,6 @@ Component.propTypes = {
   children: PropTypes.node.isRequired,
   node: PropTypes.shape({
     style: PropTypes.string.isRequired,
-    children: PropTypes.node,
+    children: PropTypes.any,
   }).isRequired,
 };

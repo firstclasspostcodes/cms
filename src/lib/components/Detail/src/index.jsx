@@ -20,6 +20,6 @@ export const Component = ({ content, summary, ...props }) => {
 Component.displayName = 'CMS.Detail';
 
 Component.propTypes = {
-  content: PropTypes.object.isRequired,
-  summary: PropTypes.object.isRequired,
+  content: PropTypes.any.isRequired,
+  summary: PropTypes.any.isRequired,
 };

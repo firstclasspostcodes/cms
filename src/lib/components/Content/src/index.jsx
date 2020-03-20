@@ -28,7 +28,7 @@ const Component = ({ content, presentationOptions = {}, ...props }) => {
 Component.displayName = 'CMS.Content';
 
 Component.propTypes = {
-  content: PropTypes.object.isRequired,
+  content: PropTypes.any.isRequired,
   presentationOptions: PropTypes.object,
 };
 

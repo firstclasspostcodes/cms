@@ -13,5 +13,5 @@ export const Component = ({ children, ...props }) => {
 Component.displayName = 'CMS.Color';
 
 Component.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.any.isRequired,
 };
