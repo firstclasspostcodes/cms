@@ -1,11 +1,3 @@
-import React from 'react';
-import { MdDetails as Icon } from 'react-icons/md';
-
-const DetailRender = props => {
-  console.log(props);
-  return <h6>DetailRender</h6>;
-};
-
 export default {
   title: 'Detail',
 
@@ -42,11 +34,6 @@ export default {
       type: 'color',
     },
   ],
-
-  blockEditor: {
-    icon: Icon,
-    render: DetailRender,
-  },
 
   preview: {
     select: {

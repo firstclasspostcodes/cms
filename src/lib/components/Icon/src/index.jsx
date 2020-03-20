@@ -6,8 +6,7 @@ export const Component = ({ name, children }) => {
   const Icon = Icons[name];
 
   if (!Icon) {
-    console.error(`<Icon name="${name}" /> does not exist`);
-    return null;
+    throw new Error(`<Icon name="${name}" /> does not exist`);
   }
 
   return (

@@ -49,8 +49,7 @@ export const Component = class extends React.Component {
       const componentKey = id || `${type}-${i}`;
       const Reference = Component.findType(type, components);
       if (!Reference) {
-        console.warn(`Content type "${type}" is unrecognised.`);
-        return null;
+        throw new Error(`Content type "${type}" is unrecognised.`);
       }
       const reference = <Reference key={componentKey} {...props} />;
       if (typeof containerComponent !== 'function') {

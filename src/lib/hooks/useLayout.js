@@ -55,4 +55,4 @@ export default ({ properties, theme }) =>
     }
 
     return layoutProps;
-  }, [properties]);
+  }, [properties, theme.breakpoints]);

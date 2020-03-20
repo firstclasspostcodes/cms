@@ -38,4 +38,4 @@ export default (props = {}, options = {}) =>
     });
 
     return presentationProps;
-  }, [props]);
+  }, [props, options]);
