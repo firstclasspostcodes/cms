@@ -1,1 +1,1 @@
-export { default as Pane } from './src';
+export Pane from './src';
