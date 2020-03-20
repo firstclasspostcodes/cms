@@ -16,6 +16,8 @@ export const Component = ({ children, action, ...props }) => {
   );
 };
 
+Component.displayName = 'CMS.Button';
+
 Component.propTypes = {
   children: PropTypes.node.isRequired,
   action: PropTypes.arrayOf([PropTypes.object]).isRequired,

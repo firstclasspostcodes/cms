@@ -23,7 +23,7 @@ export const Component = ({ head, path, data: { route, site } }) => (
   </>
 );
 
-Component.displayName = 'Route';
+Component.displayName = 'CMS.Route';
 
 Component.propTypes = {
   head: PropTypes.func,

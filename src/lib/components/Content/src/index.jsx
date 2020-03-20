@@ -8,7 +8,7 @@ import usePresentation from '../../../hooks/usePresentation';
 
 import defaultSerializers from './defaultSerializers';
 
-const Content = ({ content, presentationOptions = {}, ...props }) => {
+const Component = ({ content, presentationOptions = {}, ...props }) => {
   const presentationProps = usePresentation(props, presentationOptions);
 
   // eslint-disable-next-line react/prop-types
@@ -23,15 +23,17 @@ const Content = ({ content, presentationOptions = {}, ...props }) => {
   );
 };
 
-Content.propTypes = {
+Component.displayName = 'CMS.Content';
+
+Component.propTypes = {
   content: PropTypes.object.isRequired,
   presentationOptions: PropTypes.object,
 };
 
-Content.defaultProps = {
+Component.defaultProps = {
   presentationOptions: {},
 };
 
-Content.isType = type => /^content(block)?$/i.test(type);
+Component.isType = type => /^content(block)?$/i.test(type);
 
-export default withTheme(Content);
+export default withTheme(Component);

@@ -14,6 +14,8 @@ export const Component = ({ children, ...props }) => {
   );
 };
 
+Component.displayName = 'CMS.Link';
+
 Component.propTypes = {
   children: PropTypes.node.isRequired,
 };

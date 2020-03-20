@@ -31,6 +31,8 @@ export const Component = ({ image, ...props }) => {
   );
 };
 
+Component.displayName = 'CMS.Illustration';
+
 Component.isType = type => type === 'illustration';
 
 Component.propTypes = {

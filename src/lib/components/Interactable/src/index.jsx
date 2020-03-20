@@ -22,6 +22,8 @@ export const Component = ({ name, _key: key, id, data, ...props }) => {
   );
 };
 
+Component.displayName = 'CMS.Interactable';
+
 Component.staticConfig = {
   components: {},
 };

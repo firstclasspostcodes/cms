@@ -10,6 +10,8 @@ export const Component = ({ children, ...props }) => {
   return <Typography.Text color={colorProp}>{children}</Typography.Text>;
 };
 
+Component.displayName = 'CMS.Color';
+
 Component.propTypes = {
   children: PropTypes.node.isRequired,
 };

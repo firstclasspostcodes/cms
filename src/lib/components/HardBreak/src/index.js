@@ -10,3 +10,5 @@ export const Component = styled.br`
     display: inline;
   `}
 `;
+
+Component.displayName = 'CMS.HardBreak';

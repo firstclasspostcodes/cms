@@ -43,6 +43,8 @@ export const Component = props => {
   return <Heading alignment={alignment}>{children}</Heading>;
 };
 
+Component.displayName = 'CMS.Heading';
+
 Component.propTypes = {
   children: PropTypes.node.isRequired,
   node: PropTypes.shape({

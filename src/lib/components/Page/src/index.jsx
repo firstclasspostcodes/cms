@@ -15,7 +15,7 @@ export const Component = ({ render, body, ...props }) => {
   return Component.staticConfig.render({ children, ...presentationProps });
 };
 
-Component.displayName = 'Page';
+Component.displayName = 'CMS.Page';
 
 Component.staticConfig = {
   render: () => {

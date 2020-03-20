@@ -54,7 +54,7 @@ const Component = props => {
   );
 };
 
-Component.displayName = 'Pane';
+Component.displayName = 'CMS.Pane';
 
 Component.isType = type => type === 'pane';
 

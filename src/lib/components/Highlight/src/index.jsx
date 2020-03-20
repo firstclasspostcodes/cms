@@ -10,6 +10,8 @@ export const Component = ({ children, ...props }) => {
   return <Typography.Highlight highlight={highlight}>{children}</Typography.Highlight>;
 };
 
+Component.displayName = 'CMS.Highlight';
+
 Component.propTypes = {
   children: PropTypes.node.isRequired,
 };

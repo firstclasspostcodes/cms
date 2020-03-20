@@ -18,6 +18,8 @@ export const Component = ({ name, children }) => {
   );
 };
 
+Component.displayName = 'CMS.Icon';
+
 Component.propTypes = {
   name: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,

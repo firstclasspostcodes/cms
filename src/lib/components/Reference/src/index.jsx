@@ -61,6 +61,8 @@ export const Component = class extends React.Component {
   }
 };
 
+Component.displayName = 'CMS.Reference';
+
 Component.propTypes = {
   containerComponent: PropTypes.func.isRequired,
   components: PropTypes.arrayOf(PropTypes.element).isRequired,
