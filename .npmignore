@@ -4,9 +4,9 @@
 /.*rc
 .eslint*
 .gitignore
-src
-config
-dist
-static
 .env
-README.md
+/src
+/config
+/dist
+/static
+/README.md
