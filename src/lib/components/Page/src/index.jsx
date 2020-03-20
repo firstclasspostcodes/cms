@@ -8,7 +8,7 @@ import { Reference } from '../../Reference';
 import { Content } from '../../Content';
 import { Pane } from '../../Pane';
 
-export const Component = ({ render, body, ...props }) => {
+export const Component = ({ body, ...props }) => {
   const presentationProps = usePresentation({ ...props, theme: Theme });
   const bodyComponents = body.filter(Boolean);
   const children = <Reference components={[Content, Pane]} body={bodyComponents} />;
