@@ -8,6 +8,8 @@ import usePresentation from '../../../hooks/usePresentation';
 
 import defaultSerializers from './defaultSerializers';
 
+// const defaultSerializers = {};
+
 const Component = ({ content, presentationOptions = {}, ...props }) => {
   const presentationProps = usePresentation(props, presentationOptions);
 
@@ -36,4 +38,4 @@ Component.defaultProps = {
 
 Component.isType = type => /^content(block)?$/i.test(type);
 
-export default withTheme(Component);
+export const Content = withTheme(Component);

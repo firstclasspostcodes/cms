@@ -1,1 +1,1 @@
-export Content from './src';
+export { Content } from './src';

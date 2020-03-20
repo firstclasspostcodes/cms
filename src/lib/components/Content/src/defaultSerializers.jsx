@@ -24,7 +24,7 @@ const spreadProps = (Component, props = {}) => ({ _key: key, children, mark }) =
   return <Component {...componentProps}>{children}</Component>;
 };
 
-const passThrough = ({ children }) => <>{children}</>;
+const passThrough = ({ children }) => children;
 
 const blocks = [BlockContent.defaultSerializers.types.block];
 
