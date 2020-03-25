@@ -1,5 +1,3 @@
-import { useMemo } from 'react';
-
 const withSortedSizeProp = (props, breakpoints) => {
   const { size } = props;
   if (!size || typeof size === 'number') {
@@ -35,24 +33,23 @@ const getUnitLayout = ({ size = 1, ...rest }) => {
   return props;
 };
 
-export default ({ properties, theme }) =>
-  useMemo(() => {
-    const { grid: gridProps, unit = {} } = properties || {};
+export default ({ properties, theme }) => {
+  const { grid: gridProps, unit = {} } = properties || {};
 
-    const breakpoints = Object.keys(theme.breakpoints);
+  const breakpoints = Object.keys(theme.breakpoints);
 
-    const layoutProps = {
-      gridProps,
-    };
+  const layoutProps = {
+    gridProps,
+  };
 
-    if (unit.constructor === Array) {
-      layoutProps.getUnitLayoutProps = index =>
-        getUnitLayout(withSortedSizeProp(unit[index], breakpoints));
-    } else {
-      const sortedSizeProp = withSortedSizeProp(unit, breakpoints);
-      const unitProps = getUnitLayout(sortedSizeProp);
-      layoutProps.getUnitLayoutProps = () => unitProps;
-    }
+  if (unit.constructor === Array) {
+    layoutProps.getUnitLayoutProps = index =>
+      getUnitLayout(withSortedSizeProp(unit[index], breakpoints));
+  } else {
+    const sortedSizeProp = withSortedSizeProp(unit, breakpoints);
+    const unitProps = getUnitLayout(sortedSizeProp);
+    layoutProps.getUnitLayoutProps = () => unitProps;
+  }
 
-    return layoutProps;
-  }, [properties, theme.breakpoints]);
+  return layoutProps;
+};

@@ -1,20 +1,17 @@
-import { useMemo } from 'react';
+export default color => {
+  if (!color) {
+    return null;
+  }
 
-export default color =>
-  useMemo(() => {
-    if (!color) {
-      return null;
-    }
+  const { name, hue } = color;
 
-    const { name, hue } = color;
+  if (typeof hue === 'number') {
+    return [name, hue];
+  }
 
-    if (typeof hue === 'number') {
-      return [name, hue];
-    }
+  if (!name) {
+    return null;
+  }
 
-    if (!name) {
-      return null;
-    }
-
-    return name;
-  }, [color]);
+  return name;
+};
