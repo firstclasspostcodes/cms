@@ -12,8 +12,6 @@ export { Heading } from './Heading';
 
 export { Highlight } from './Highlight';
 
-export { Icon } from './Icon';
-
 export { Illustration } from './Illustration';
 
 export { Interactable } from './Interactable';

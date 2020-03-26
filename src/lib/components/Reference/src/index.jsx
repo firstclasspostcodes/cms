@@ -63,7 +63,11 @@ export const Component = class extends React.Component {
 Component.displayName = 'CMS.Reference';
 
 Component.propTypes = {
-  containerComponent: PropTypes.func.isRequired,
+  containerComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.bool]),
   components: PropTypes.arrayOf(PropTypes.element).isRequired,
-  body: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  body: PropTypes.any.isRequired,
+};
+
+Component.defaultProps = {
+  containerComponent: null,
 };

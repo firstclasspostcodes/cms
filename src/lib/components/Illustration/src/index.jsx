@@ -50,7 +50,7 @@ Component.isType = type => type === 'illustration';
 
 Component.propTypes = {
   image: PropTypes.shape({
-    caption: PropTypes.string.isRequired,
+    caption: PropTypes.string,
     asset: PropTypes.object.isRequired,
   }).isRequired,
 };

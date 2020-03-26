@@ -61,7 +61,7 @@ Component.isType = type => type === 'pane';
 Component.propTypes = {
   __typename: PropTypes.string.isRequired,
   before: PropTypes.oneOfType([PropTypes.shape(Content.propTypes), PropTypes.bool]),
-  body: PropTypes.shape(Content.propTypes).isRequired,
+  body: PropTypes.any.isRequired,
 };
 
 Component.defaultProps = {

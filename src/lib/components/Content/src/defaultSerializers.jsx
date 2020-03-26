@@ -12,7 +12,6 @@ import { Detail } from '../../Detail';
 import { Highlight } from '../../Highlight';
 import { Color } from '../../Color';
 import { Link } from '../../Link';
-import { Icon } from '../../Icon';
 
 const spreadProps = (Component, props = {}) => ({ _key: key, children, mark }) => {
   const componentProps = { key, ...props };
@@ -54,8 +53,6 @@ const marks = {
   strong: spreadProps(Typography.Text, { weight: 'bold' }),
 
   em: spreadProps(Typography.Text, { slant: -10 }),
-
-  icon: spreadProps(Icon),
 
   color: spreadProps(Color),
 
