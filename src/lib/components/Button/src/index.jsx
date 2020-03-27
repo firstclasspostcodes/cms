@@ -20,5 +20,5 @@ Component.displayName = 'CMS.Button';
 
 Component.propTypes = {
   children: PropTypes.any.isRequired,
-  action: PropTypes.arrayOfType([PropTypes.object]).isRequired,
+  action: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
