@@ -1244,9 +1244,9 @@
     fs-extra "^6.0.1"
     promise-props-recursive "^1.0.0"
 
-"@sanity/cli@^1.149.2":
-  version "1.149.2"
-  resolved "https://registry.npmjs.org/@sanity/cli/-/cli-1.149.2.tgz#15b3d39cbd71b5cb5f6b9e4b6e8bfeb5669d3b49"
+"@sanity/cli@^1.149.6":
+  version "1.149.6"
+  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-1.149.6.tgz#a3363f2b4dd859fc18c74bc1d249273c4a0961b1"
 
 "@sanity/client@1.149.2":
   version "1.149.2"
