@@ -1,10 +1,12 @@
 import { Interactable } from './components/Interactable';
 import { Illustration } from './components/Illustration';
+import { Content } from './components/Content';
 import { Page } from './components/Page';
 
 const configMap = [
   ['interactable', Interactable],
   ['illustration', Illustration],
+  ['content', Content],
   ['page', Page],
 ];
 

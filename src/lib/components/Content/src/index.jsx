@@ -8,21 +8,19 @@ import usePresentation from '../../../hooks/usePresentation';
 
 import defaultSerializers from './defaultSerializers';
 
-// const defaultSerializers = {};
-
 const Component = ({ content, presentationOptions = {}, ...props }) => {
   const presentationProps = usePresentation(props, presentationOptions);
 
+  const { serializers } = Component.staticConfig;
+
   // eslint-disable-next-line react/prop-types
-  defaultSerializers.container = ({ children, ...containerProps }) => (
+  serializers.container = ({ children, ...containerProps }) => (
     <Pane containment="layout paint" {...props} {...presentationProps} {...containerProps}>
       {children}
     </Pane>
   );
 
-  return (
-    <BlockContent blocks={content} renderContainerOnSingleChild serializers={defaultSerializers} />
-  );
+  return <BlockContent blocks={content} renderContainerOnSingleChild serializers={serializers} />;
 };
 
 Component.displayName = 'CMS.Content';
@@ -30,6 +28,10 @@ Component.displayName = 'CMS.Content';
 Component.propTypes = {
   content: PropTypes.any.isRequired,
   presentationOptions: PropTypes.object,
+};
+
+Component.staticConfig = {
+  serializers: defaultSerializers,
 };
 
 Component.defaultProps = {

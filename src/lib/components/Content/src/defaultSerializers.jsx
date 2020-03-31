@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { Typography } from '@firstclasspostcodes/sw14';
+import { Code, Typography } from '@firstclasspostcodes/sw14';
 import BlockContent from '@sanity/block-content-to-react';
 
 import { HardBreak } from '../../HardBreak';
@@ -53,6 +53,8 @@ const marks = {
   strong: spreadProps(Typography.Text, { weight: 'bold' }),
 
   em: spreadProps(Typography.Text, { slant: -10 }),
+
+  samp: spreadProps(Code.Sample),
 
   color: spreadProps(Color),
 
