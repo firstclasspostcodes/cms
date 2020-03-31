@@ -43,8 +43,10 @@ export default ({ properties, theme }) => {
   };
 
   if (unit.constructor === Array) {
-    layoutProps.getUnitLayoutProps = index =>
-      getUnitLayout(withSortedSizeProp(unit[index], breakpoints));
+    layoutProps.getUnitLayoutProps = index => {
+      const sortedSizeProp = withSortedSizeProp(unit[index], breakpoints);
+      return getUnitLayout(sortedSizeProp);
+    };
   } else {
     const sortedSizeProp = withSortedSizeProp(unit, breakpoints);
     const unitProps = getUnitLayout(sortedSizeProp);
