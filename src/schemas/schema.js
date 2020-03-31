@@ -3,6 +3,8 @@ import createSchema from 'part:@sanity/base/schema-creator';
 
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 
+import codeBlock from './objects/codeBlock';
+import codeExample from './objects/codeExample';
 import button from './objects/button';
 import picture from './objects/picture';
 import detail from './objects/detail';
@@ -28,6 +30,8 @@ export default createSchema({
     picture,
     detail,
     interactable,
+    codeBlock,
+    codeExample,
 
     color,
     icon,

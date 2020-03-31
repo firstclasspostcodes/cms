@@ -1,9 +1,11 @@
 import Heading from './extensions/heading';
+import Code from './extensions/code';
 import Subheading from './extensions/subheading';
 import Bold from './extensions/bold';
 import Center from './extensions/center';
 import Italic from './extensions/italic';
 import Underline from './extensions/underline';
+import Sample from './extensions/sample';
 
 export default {
   title: 'Text',
@@ -24,9 +26,10 @@ export default {
         { title: 'H6', value: 'h6' },
         { title: 'Caption', value: 'caption' },
         { title: 'Quote', value: 'blockquote' },
+        Code,
       ],
       marks: {
-        decorators: [Bold, Italic, Underline, Center],
+        decorators: [Bold, Italic, Underline, Center, Sample],
         annotations: [
           { type: 'icon' },
           { type: 'color' },
@@ -48,6 +51,9 @@ export default {
     },
     {
       type: 'content',
+    },
+    {
+      type: 'codeExample',
     },
   ],
 };

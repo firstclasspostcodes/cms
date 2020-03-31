@@ -35,7 +35,8 @@
     "@sanity/desk-tool",
     "seo-tools",
     "color-list",
-    "json-input"
+    "json-input",
+    "@sanity/code-input"
   ],
   "env": {
     "development": {
