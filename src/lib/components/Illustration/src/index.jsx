@@ -49,8 +49,5 @@ Component.staticConfig = {
 Component.isType = type => type === 'illustration';
 
 Component.propTypes = {
-  image: PropTypes.shape({
-    caption: PropTypes.string,
-    asset: PropTypes.object.isRequired,
-  }).isRequired,
+  image: PropTypes.object.isRequired,
 };

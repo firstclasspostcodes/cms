@@ -47,8 +47,5 @@ Component.displayName = 'CMS.Heading';
 
 Component.propTypes = {
   children: PropTypes.node.isRequired,
-  node: PropTypes.shape({
-    style: PropTypes.string.isRequired,
-    children: PropTypes.any,
-  }).isRequired,
+  node: PropTypes.object.isRequired,
 };

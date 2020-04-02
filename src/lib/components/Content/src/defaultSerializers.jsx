@@ -7,6 +7,7 @@ import { HardBreak } from '../../HardBreak';
 import { Heading } from '../../Heading';
 import { Interactable } from '../../Interactable';
 import { Illustration } from '../../Illustration';
+import { CodeExample } from '../../CodeExample';
 import { Button } from '../../Button';
 import { Detail } from '../../Detail';
 import { Highlight } from '../../Highlight';
@@ -39,6 +40,8 @@ const types = {
   picture: ({ node }) => <Illustration image={node} spacing={{ mb: 4 }} />,
 
   interactable: ({ node }) => <Interactable {...node} />,
+
+  codeExample: ({ node }) => <CodeExample {...node} />,
 
   detail: ({ node }) => <Detail {...node} />,
 };

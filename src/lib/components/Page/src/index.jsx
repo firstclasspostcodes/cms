@@ -24,6 +24,9 @@ Component.staticConfig = {
 };
 
 Component.propTypes = {
-  body: PropTypes.arrayOf([PropTypes.object]).isRequired,
-  render: PropTypes.func.isRequired,
+  body: PropTypes.array,
+};
+
+Component.defaultProps = {
+  body: [],
 };
