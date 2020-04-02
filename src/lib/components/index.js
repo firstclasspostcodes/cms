@@ -1,5 +1,7 @@
 export { Button } from './Button';
 
+export { CodeExample } from './CodeExample';
+
 export { Color } from './Color';
 
 export { Content } from './Content';
