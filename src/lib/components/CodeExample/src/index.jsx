@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Select, Code, Grid, Pane, Settings, Typography } from '@firstclasspostcodes/sw14';
 
-const { useSetting } = Settings;
+const { connectSettings, useSetting } = Settings;
 
 const selectLanguage = (language, languages) => {
   const element = languages.find(({ code }) => code.language === language);
@@ -14,7 +14,7 @@ const selectLanguage = (language, languages) => {
 
 const getLanguages = languages => languages.map(({ code }) => code.language);
 
-export const CodeExample = ({ title, languages }) => {
+export const CodeExample = connectSettings(({ title, languages }) => {
   const [
     defaultLanguage = CodeExample.staticConfig.defaultLanguage,
     setDefaultLanguage,
@@ -60,7 +60,7 @@ export const CodeExample = ({ title, languages }) => {
       </Pane>
     </Pane>
   );
-};
+});
 
 CodeExample.staticConfig = {
   defaultLanguage: 'javascript',
