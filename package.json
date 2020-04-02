@@ -7,7 +7,8 @@
   "author": "Firstclasspostcodes <support@firstclasspostcodes.com> (https://firstclasspostcodes.com)",
   "license": "MIT",
   "scripts": {
-    "build": "sanity build && npm run build-commonjs && npm run build-esm",
+    "build": "sanity build && npm run build-lib",
+    "build-lib": "npm run build-commonjs && npm run build-esm",
     "build-commonjs": "BABEL_ENV=commonjs babel src/lib --out-dir commonjs --copy-files --ignore '**/test' --source-maps inline",
     "build-esm": "BABEL_ENV=esm babel src/lib --out-dir esm --copy-files --ignore '**/test' --source-maps inline",
     "commit": "npx git-cz",
@@ -27,7 +28,7 @@
   },
   "homepage": "https://github.com/firstclasspostcodes/web-cms#readme",
   "dependencies": {
-    "@firstclasspostcodes/sw14": "^1.11.0",
+    "@firstclasspostcodes/sw14": "^1.14.0",
     "@sanity/base": "^1.149.3",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/code-input": "^1.149.7",
@@ -45,6 +46,7 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.9.0",
     "sanity-plugin-color-list": "^1.2.1",
+    "sanity-plugin-datatable": "^1.0.5",
     "sanity-plugin-json-input": "^0.1.0",
     "sanity-plugin-seo-tools": "^1.0.6",
     "styled-components": "^5.0.1",
