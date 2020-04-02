@@ -4,14 +4,23 @@ export default {
   type: 'object',
   fields: [
     {
-      title: 'Title',
-      name: 'title',
-      type: 'string',
-    },
-    {
       title: 'Code',
       type: 'code',
       name: 'code',
     },
   ],
+  preview: {
+    select: {
+      code: 'code',
+    },
+    prepare({ code, content }) {
+      const title = code.language;
+      // const subtitle = textFromBlock(content);
+
+      return {
+        title,
+        // subtitle,
+      };
+    },
+  },
 };

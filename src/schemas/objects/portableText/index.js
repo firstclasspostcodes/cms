@@ -55,5 +55,8 @@ export default {
     {
       type: 'codeExample',
     },
+    {
+      type: 'table',
+    },
   ],
 };

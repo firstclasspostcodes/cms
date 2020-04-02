@@ -36,7 +36,8 @@
     "seo-tools",
     "color-list",
     "json-input",
-    "@sanity/code-input"
+    "@sanity/code-input",
+    "datatable"
   ],
   "env": {
     "development": {
