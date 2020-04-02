@@ -6,6 +6,10 @@ export default ({ _type: type, blank, page, href }) => {
     target: blank ? '_blank' : null,
   };
 
+  if (!type) {
+    return null;
+  }
+
   switch (type) {
     case 'internalLink':
       const { current } = page.slug;
