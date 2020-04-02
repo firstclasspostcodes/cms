@@ -27,3 +27,5 @@ export { Pane } from './Pane';
 export { Reference } from './Reference';
 
 export { Route } from './Route';
+
+export { Table } from './Table';

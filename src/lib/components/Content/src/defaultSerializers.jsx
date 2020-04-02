@@ -8,6 +8,7 @@ import { Heading } from '../../Heading';
 import { Interactable } from '../../Interactable';
 import { Illustration } from '../../Illustration';
 import { CodeExample } from '../../CodeExample';
+import { Table } from '../../Table';
 import { Button } from '../../Button';
 import { Detail } from '../../Detail';
 import { Highlight } from '../../Highlight';
@@ -42,6 +43,8 @@ const types = {
   interactable: ({ node }) => <Interactable {...node} />,
 
   codeExample: ({ node }) => <CodeExample {...node} />,
+
+  table: ({ node }) => <Table {...node} />,
 
   detail: ({ node }) => <Detail {...node} />,
 };
