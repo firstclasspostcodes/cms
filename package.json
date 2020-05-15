@@ -64,7 +64,7 @@
     "@babel/register": "^7.9.0",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-angular": "^8.3.4",
-    "@sanity/cli": "^1.149.9",
+    "@sanity/cli": "^1.149.13",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.1.0",
