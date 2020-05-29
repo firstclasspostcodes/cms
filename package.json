@@ -49,7 +49,7 @@
     "sanity-plugin-datatable": "^1.0.5",
     "sanity-plugin-json-input": "^0.1.0",
     "sanity-plugin-seo-tools": "^1.0.6",
-    "styled-components": "^5.1.0",
+    "styled-components": "^5.1.1",
     "styled-components-breakpoint": "^3.0.0-preview.20"
   },
   "devDependencies": {
