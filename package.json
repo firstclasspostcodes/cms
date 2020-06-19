@@ -33,7 +33,7 @@
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/code-input": "^1.149.16",
     "@sanity/components": "^1.149.15",
-    "@sanity/core": "^1.149.13",
+    "@sanity/core": "^1.149.17",
     "@sanity/default-layout": "^1.149.15",
     "@sanity/default-login": "^1.149.16",
     "@sanity/desk-tool": "^1.149.15",
