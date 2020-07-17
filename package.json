@@ -46,7 +46,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
     "sanity-plugin-color-list": "^1.2.1",
-    "sanity-plugin-datatable": "^1.0.5",
+    "sanity-plugin-datatable": "^1.1.0",
     "sanity-plugin-json-input": "^0.1.0",
     "sanity-plugin-seo-tools": "^1.0.6",
     "styled-components": "^5.1.1",
