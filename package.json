@@ -63,7 +63,7 @@
     "@babel/preset-react": "^7.10.4",
     "@babel/register": "^7.10.5",
     "@commitlint/cli": "^9.1.1",
-    "@commitlint/config-angular": "^9.1.1",
+    "@commitlint/config-angular": "^9.1.2",
     "@sanity/cli": "^1.149.19",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
