@@ -84,7 +84,7 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^2.5.1",
     "git-cz": "^4.7.0",
-    "husky": "^4.2.5",
+    "husky": "^4.3.0",
     "prettier": "^1.19.1"
   }
 }
