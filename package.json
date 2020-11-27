@@ -44,7 +44,7 @@
     "react": "^16.14",
     "react-dom": "^16.14",
     "react-helmet": "^6.1.0",
-    "react-icons": "^3.11.0",
+    "react-icons": "^4.1.0",
     "sanity-plugin-color-list": "^1.2.1",
     "sanity-plugin-datatable": "^1.1.0",
     "sanity-plugin-json-input": "^0.1.0",
