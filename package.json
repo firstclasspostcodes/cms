@@ -61,7 +61,7 @@
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.10",
-    "@babel/register": "^7.12.1",
+    "@babel/register": "^7.12.10",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-angular": "^11.0.0",
     "@sanity/cli": "^2.1.0",
